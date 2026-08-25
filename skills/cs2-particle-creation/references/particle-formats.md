@@ -7,6 +7,7 @@
 结构示例（kv3 头版本 GUID 以 addon 现有文件为准）：
 
 ```text
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vpcf63:version{a6e6a69e-52d3-4527-8b9c-ff3bb91aca3e} -->
 {
     _class = "CParticleSystemDefinition"
     m_nBehaviorVersion = 12

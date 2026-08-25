@@ -1,23 +1,27 @@
 # 材质格式：`.vmat`
 
-## 规范模板（只写 csgo_complex）
+## 规范模板（只写 csgo_complex，写法以 addon 现有 .vmat 为准）
 
 检测到金属度/自发光等贴图或效果时的完整写法：
 
 ```
+// THIS FILE IS AUTO-GENERATED
+
 Layer0
 {
-    shader "csgo_complex.vfx"
+	shader "csgo_complex.vfx"
 
-    F_METALNESS_TEXTURE 1
-    F_SELF_ILLUM 1
+	F_ANISOTROPIC_GLOSS 1
+	F_METALNESS_TEXTURE 1
+	F_SELF_ILLUM 1
+	F_TRANSMISSIVE_BACKFACE_NDOTL 1
 
-    TextureColor "materials/<name>_BaseColor.jpg"
-    TextureMetalness "materials/<name>_Metalness.jpg"
-    TextureRoughness "materials/<name>_Roughness.jpg"
-    TextureNormal "materials/<name>_Normal.jpg"
-    TextureAmbientOcclusion "materials/<name>_AO.jpg"
-    TextureSelfIllumMask "materials/<name>_Emissive.jpg"
+	TextureAmbientOcclusion "materials/<name>_AO.jpg"
+	TextureColor "materials/<name>_BaseColor.jpg"
+	TextureMetalness "materials/<name>_Metalness.jpg"
+	TextureRoughness "materials/<name>_Roughness.jpg"
+	TextureNormal "materials/<name>_Normal.jpg"
+	TextureSelfIllumMask "materials/<name>_Emissive.jpg"
 }
 ```
 
@@ -26,15 +30,17 @@ Layer0
 ```
 Layer0
 {
-    shader "csgo_complex.vfx"
+	shader "csgo_complex.vfx"
 
-    g_flMetalness "0.000"
-    TextureColor "materials/<name>_BaseColor.jpg"
-    TextureRoughness "materials/<name>_Roughness.jpg"
-    TextureNormal "materials/<name>_Normal.jpg"
-    TextureAmbientOcclusion "materials/<name>_AO.jpg"
+	g_flMetalness "0.000"
+	TextureColor "materials/<name>_BaseColor.jpg"
+	TextureRoughness "materials/<name>_Roughness.jpg"
+	TextureNormal "materials/<name>_Normal.jpg"
+	TextureAmbientOcclusion "materials/<name>_AO.jpg"
 }
 ```
+
+**不要加 kv3 头**：vmat 与 vtex/vpcf/vpost 不同，直接以 `Layer0` 开头；键名不引号、值用引号（如 `shader "csgo_complex.vfx"`）。生成后先在 Material Editor / Hammer 中打开确认，`Invalid value` 报错通常是头部或写法不对。
 
 常用槽位：`TextureColor`、`TextureNormal`、`TextureRoughness`、`TextureMetalness`、`TextureAmbientOcclusion`、`TextureSelfIllumMask`。向量值用带引号的 `[x y z w]`，标量用带引号的数字。没有对应贴图时**不加标志位、不加空槽位**。
 
@@ -72,7 +78,7 @@ Layer0
 ## 备注
 
 - `.vtex` 由 CS2 纹理创作技能（cs2-texture-creation）负责；材质槽位可直接引用源图片，也可引用 vtex。
-- Hammer 打开/保存时自动编译；不生效时对照 addon 现有文件检查路径、着色器名与 kv3 头版本 GUID。
+- Hammer 打开/保存时自动编译；不生效时对照 addon 现有文件检查路径、着色器名与整体写法。
 
 ## 官方文档
 
