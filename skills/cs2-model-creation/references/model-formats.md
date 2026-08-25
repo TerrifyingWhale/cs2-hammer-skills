@@ -6,7 +6,7 @@
 
 `.vmdl` 是描述模型的 kv3 文本：渲染网格、骨骼、动画和物理形状。`RenderMeshFile.filename` 可引用同级 `.dmx` 网格文件，也可（新版 ModelDoc）直接引用 `.fbx`，编译器构建时自动转换。保存后 Hammer 自动编译为 `.vmdl_c`。
 
-结构示例（kv3 头以 addon 现有文件为准）：
+结构示例（kv3 头永远与 SKILL.md 模板第一行一致，不随文件变化）：
 
 ```
 {

@@ -8,8 +8,6 @@
 全部贴图/效果都检测到时的完整写法（对应 test.vmat 结构）：
 
 ```text
-// THIS FILE IS AUTO-GENERATED
-
 Layer0
 {
 	shader "csgo_complex.vfx"
