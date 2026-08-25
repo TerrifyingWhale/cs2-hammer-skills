@@ -15,7 +15,7 @@
         "CDmeInputTexture"
         {
             "m_name" "string" "InputTexture0"
-            "m_fileName" "string" "materials/<name>.png"
+            "m_fileName" "string" "materials/<文件名>.png"
             "m_colorSpace" "string" "srgb"      // 法线/粗糙度/金属度等数据图用 linear
             "m_typeString" "string" "2D"
             "m_imageProcessorArray" "element_array"

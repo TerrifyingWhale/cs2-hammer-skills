@@ -2,7 +2,7 @@
 
 ## 基本模板（直接生成 .vmdl 用这个）
 
-**kv3 头永远一模一样**（第一行照抄，不许改动、不许换版本），其余只替换 `<name>` 与路径：
+**kv3 头永远一模一样**（第一行照抄，不许改动、不许换版本），其余只替换 `<文件名>` 与路径：
 
 ```text
 <!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc41:version{12fc9d44-453a-4ae4-b4d9-7e2ac0bbd4e0} -->
@@ -22,7 +22,7 @@
 						[
 							{
 								from = "matid_1.vmat"
-								to = "materials/<name>.vmat"
+								to = "materials/<文件名>.vmat"
 							},
 						]
 						use_global_default = false
@@ -36,7 +36,7 @@
 				[
 					{
 						_class = "PhysicsMeshFile"
-						name = "<name>"
+						name = "<文件名>"
 						parent_bone = ""
 						surface_prop = "default"
 						collision_prop = "default"
@@ -44,7 +44,7 @@
 						recenter_on_parent_bone = false
 						offset_origin = [ 0.0, 0.0, 0.0 ]
 						offset_angles = [ 0.0, 0.0, 0.0 ]
-						filename = "models/<name>.fbx"
+						filename = "models/<文件名>.fbx"
 						import_scale = 1.0
 						simplification_params = 
 						{
@@ -69,7 +69,7 @@
 				[
 					{
 						_class = "RenderMeshFile"
-						filename = "models/<name>.fbx"
+						filename = "models/<文件名>.fbx"
 						import_scale = 1.0
 						import_filter = 
 						{
@@ -87,8 +87,8 @@
 }
 ```
 
-- 模型路径 `models/<name>.fbx` 相对 addon 的 `content/` 根目录，大小写与磁盘一致。
-- 默认材质 `DefaultMaterialGroup.remaps.to` = `materials/<name>.vmat`；没有同名 vmat 时在 `materials/` 下找同名 png/jpg/tga，找到则触发 CS2 材质创作技能（cs2-material-creation）生成后再填入；都没有保持 `use_global_default`。
+- 模型路径 `models/<文件名>.fbx` 相对 addon 的 `content/` 根目录，大小写与磁盘一致。
+- 默认材质 `DefaultMaterialGroup.remaps.to` = `materials/<文件名>.vmat`；没有同名 vmat 时在 `materials/` 下找同名 png/jpg/tga，找到则触发 CS2 材质创作技能（cs2-material-creation）生成后再填入；都没有保持 `use_global_default`。
 
 ## 复杂需求
 

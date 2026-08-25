@@ -13,7 +13,7 @@
 
 ## 挂载
 
-- `point_script` 实体 `cs_script` 填 `scripts/vscripts/<name>.js`；设置 `targetname` 供引用。
+- `point_script` 实体 `cs_script` 填 `scripts/vscripts/<文件名>.js`；设置 `targetname` 供引用。
 - 进游戏测试；控制台/日志中的脚本错误是主要排查手段。
 
 ## 官方文档

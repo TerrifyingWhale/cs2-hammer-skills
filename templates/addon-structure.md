@@ -7,14 +7,14 @@ content/csgo_addons/<addon>/
 ├── maps/
 │   └── <map>.vmap              # 地图源文件
 ├── materials/                  # 材质与纹理
-│   ├── <name>.vmat
-│   └── <name>.vtex
+│   ├── <文件名>.vmat
+│   └── <文件名>.vtex
 ├── models/                     # 模型
-│   └── <name>.vmdl
+│   └── <文件名>.vmdl
 ├── particles/                  # 粒子系统
-│   └── <name>.vpcf
+│   └── <文件名>.vpcf
 ├── postprocess/                # 滤镜
-│   └── <name>.vpost
+│   └── <文件名>.vpost
 ├── soundevents/                # 声音事件定义
 │   └── soundevents_addon.vsndevts
 ├── sounds/                     # 音频源文件（mp3/wav 等）

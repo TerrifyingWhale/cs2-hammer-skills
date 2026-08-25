@@ -32,7 +32,7 @@
     m_Renderers = [ ... ]
     m_Children =
     [
-        { m_ChildRef = resource:"particles/<name>.vpcf" }
+        { m_ChildRef = resource:"particles/<文件名>.vpcf" }
     ]
 }
 ```

@@ -25,7 +25,7 @@ Layer0
 	F_TRANSLUCENT 1
 
 	//---- Ambient Occlusion ----
-	TextureAmbientOcclusion "materials/<name>_AO.jpg"
+	TextureAmbientOcclusion "materials/<文件名>_AO.jpg"
 
 	//---- Color ----
 	g_flModelTintAmount "1.000"
@@ -37,18 +37,18 @@ Layer0
 	g_vTexCoordOffset "[0.000 0.000]"
 	g_vTexCoordScale "[1.000 1.000]"
 	g_vTexCoordScrollSpeed "[0.000 0.000]"
-	TextureColor "materials/<name>_BaseColor.jpg"
-	TextureTintMask "materials/<name>_TintMask.jpg"
+	TextureColor "materials/<文件名>_BaseColor.jpg"
+	TextureTintMask "materials/<文件名>_TintMask.jpg"
 
 	//---- Fog ----
 	g_bFogEnabled "1"
 
 	//---- Lighting ----
-	TextureMetalness "materials/<name>_Metalness.jpg"
-	TextureRoughness "materials/<name>_Roughness.jpg"
+	TextureMetalness "materials/<文件名>_Metalness.jpg"
+	TextureRoughness "materials/<文件名>_Roughness.jpg"
 
 	//---- Normal Map ----
-	TextureNormal "materials/<name>_Normal.jpg"
+	TextureNormal "materials/<文件名>_Normal.jpg"
 
 	//---- Self Illum（检测到自发光贴图/效果才加）----
 	g_flSelfIllumAlbedoFactor "1.000"
@@ -56,7 +56,7 @@ Layer0
 	g_flSelfIllumScale "1.000"
 	g_vSelfIllumScrollSpeed "[0.000 0.000]"
 	g_vSelfIllumTint "[1.000000 1.000000 1.000000 0.000000]"
-	TextureSelfIllumMask "materials/<name>_Emissive.jpg"
+	TextureSelfIllumMask "materials/<文件名>_Emissive.jpg"
 
 	//---- Texture Address Mode ----
 	g_nTextureAddressModeU "0" // Wrap
@@ -64,10 +64,10 @@ Layer0
 
 	//---- Translucent（检测到透明才加）----
 	g_flOpacityScale "1.000"
-	TextureTranslucency "materials/<name>_Translucency.jpg"
+	TextureTranslucency "materials/<文件名>_Translucency.jpg"
 
 	//---- Transmission（检测到透射贴图才加）----
-	TextureTransmissiveColor "materials/<name>_Color.jpg"
+	TextureTransmissiveColor "materials/<文件名>_Color.jpg"
 
 	UnusedVariables
 	{
@@ -103,7 +103,7 @@ Layer0
 	shader "csgo_complex.vfx"
 
 	//---- Ambient Occlusion ----
-	TextureAmbientOcclusion "materials/<name>_AO.jpg"
+	TextureAmbientOcclusion "materials/<文件名>_AO.jpg"
 
 	//---- Color ----
 	g_flModelTintAmount "1.000"
@@ -115,16 +115,16 @@ Layer0
 	g_vTexCoordOffset "[0.000 0.000]"
 	g_vTexCoordScale "[1.000 1.000]"
 	g_vTexCoordScrollSpeed "[0.000 0.000]"
-	TextureColor "materials/<name>_BaseColor.jpg"
+	TextureColor "materials/<文件名>_BaseColor.jpg"
 
 	//---- Fog ----
 	g_bFogEnabled "1"
 
 	//---- Lighting ----
-	TextureRoughness "materials/<name>_Roughness.jpg"
+	TextureRoughness "materials/<文件名>_Roughness.jpg"
 
 	//---- Normal Map ----
-	TextureNormal "materials/<name>_Normal.jpg"
+	TextureNormal "materials/<文件名>_Normal.jpg"
 
 	//---- Texture Address Mode ----
 	g_nTextureAddressModeU "0" // Wrap

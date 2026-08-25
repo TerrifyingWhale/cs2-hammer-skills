@@ -3,7 +3,7 @@
 ## 是什么
 
 - 事件定义在 `content/csgo_addons/<addon>/soundevents/soundevents_addon.vsndevts`（kv3 文本），文件名保持不变。
-- 音频源（wav/mp3）放 `sounds/` 下，由 Hammer 自动编译生成 `.vsnd_c`；事件通过 `vsnd_files` / `vsnd_files_track_01` 等字段引用 `sounds/.../<name>.vsnd` 轨道。
+- 音频源（wav/mp3）放 `sounds/` 下，由 Hammer 自动编译生成 `.vsnd_c`；事件通过 `vsnd_files` / `vsnd_files_track_01` 等字段引用 `sounds/.../<文件名>.vsnd` 轨道。
 - 事件按名称被游戏代码、地图实体、动画触发，不是按文件路径。
 
 ## 修改规则（只追加不删除）

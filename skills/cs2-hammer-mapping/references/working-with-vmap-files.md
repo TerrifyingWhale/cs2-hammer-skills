@@ -28,7 +28,7 @@ dmxconvert.exe -i <map.vmap> -o <map.txt> -oe keyvalues2 -of world
 - 转换后的文本中，每个实体都有一个 `"entity_properties" "EditGameClassProps"` 块，其中恰好包含一行 `"classname" "string" "<class>"`。
 - `"entity_properties" "EditGameClassProps"` 块的数量等于 `"classname" "string"` 行的数量——这是判断解析是否完整的有效自检，因为每个块恰好有一个 classname。
 - 统计某个类别的实体数量（例如 `trigger_teleport`）时，精确匹配统计 `"classname" "string" "trigger_teleport"` 行。
-- `"targetname" "string" "<name>"` 位于 classname 之后不久；targetname 为 `""` 表示实体未命名。
+- `"targetname" "string" "<名称>"` 位于 classname 之后不久；targetname 为 `""` 表示实体未命名。
 
 ## 程序化添加刷子几何（无 GUI / 批量编辑）
 
