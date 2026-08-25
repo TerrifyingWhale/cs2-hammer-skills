@@ -1,0 +1,3 @@
+interface:
+  display_name: "CS2 模型创作"
+  short_description: "创建和编辑 CS2 模型（vmdl），包含 FBX/DMX 导入、碰撞、LOD 与 prop 类型"

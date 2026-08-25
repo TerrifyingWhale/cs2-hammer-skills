@@ -1,0 +1,3 @@
+interface:
+  display_name: "CS2 滤镜创作"
+  short_description: "创建和编辑 CS2 滤镜（vpost），包含色调映射、泛光、暗角等图层配置"

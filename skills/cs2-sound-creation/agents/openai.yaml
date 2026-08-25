@@ -1,0 +1,3 @@
+interface:
+  display_name: "CS2 声音创作"
+  short_description: "创建和编辑 CS2 自定义声音（vsndevts 事件与音频源），包含音量、循环与触发设置"

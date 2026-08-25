@@ -1,0 +1,17 @@
+[
+  {
+    "name": "floor",
+    "center": [0, 0, 8],
+    "half": [256, 256, 8]
+  },
+  {
+    "name": "back_wall",
+    "center": [0, -248, 128],
+    "half": [256, 8, 128]
+  },
+  {
+    "name": "left_wall",
+    "center": [-248, 0, 128],
+    "half": [8, 256, 128]
+  }
+]

@@ -1,0 +1,3 @@
+interface:
+  display_name: "CS2 纹理创作"
+  short_description: "创建和编辑 CS2 纹理定义（vtex），包含色彩空间与压缩格式设置"

@@ -1,0 +1,3 @@
+interface:
+  display_name: "CS2 粒子创作"
+  short_description: "创建和编辑 CS2 粒子系统（vpcf），包含发射器、操作器、渲染器与贴图配置"

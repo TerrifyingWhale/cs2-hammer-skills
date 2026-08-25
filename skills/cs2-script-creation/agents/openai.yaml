@@ -1,0 +1,3 @@
+interface:
+  display_name: "CS2 脚本创作"
+  short_description: "创建和编辑 CS2 脚本（cs_script），包含 point_script 挂载与 Scripting API 调用"

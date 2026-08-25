@@ -1,0 +1,3 @@
+interface:
+  display_name: "CS2 材质创作"
+  short_description: "创建和编辑 CS2 材质与纹理（vmat/vtex），包含着色器选择与透明/自发光设置"

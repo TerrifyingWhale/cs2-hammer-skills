@@ -1,0 +1,15 @@
+# macOS / Windows
+.DS_Store
+Thumbs.db
+
+# Local temporary files
+*.tmp
+*.temp
+*.log
+
+# Python
+__pycache__/
+*.pyc
+
+# Local planning artifacts (optional, keep plan-template)
+plan/
