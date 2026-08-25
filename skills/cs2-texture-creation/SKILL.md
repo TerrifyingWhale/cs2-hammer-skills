@@ -14,12 +14,12 @@ description: "创建或编辑 Counter-Strike 2 纹理定义（.vtex），用于 
 3. "色彩空间？"（颜色图 srgb；法线/粗糙度等数据图 linear）
 4. "需要自定义压缩/mipmap 吗？"（默认 DXT5）
 
-能推断的不要问：按 addon 现有 `.vtex` 与素材命名惯例推断用途与色彩空间。
+能推断的不要问：按素材命名惯例推断用途与色彩空间。
 
 ## 工作流
 
 1. 确定源图片路径与用途。
-2. 以 addon 现有 `.vtex` 为模板（规范模板见 [references/texture-formats.md](references/texture-formats.md)），只改 `m_fileName` 和 `m_colorSpace`。
+2. 直接按 [references/texture-formats.md](references/texture-formats.md) 的规范模板写，只改 `m_fileName` 和 `m_colorSpace`。
 3. 写入 `materials/`；Hammer 自动编译。
 
 ## 批量模式
@@ -27,7 +27,7 @@ description: "创建或编辑 Counter-Strike 2 纹理定义（.vtex），用于 
 1. 公共设置只问一次（色彩空间规则、压缩格式）。
 2. 接受命名约定（如 `_Normal`/`_n` → linear）。
 3. 一次性输出全部 `.vtex` 文件清单与内容。
-4. 能推断的不要问（以 addon 现有 `.vtex` 为准）。
+4. 能推断的不要问（按素材命名约定推断）。
 
 ## References
 
