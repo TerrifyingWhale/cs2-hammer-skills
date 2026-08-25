@@ -1,20 +1,20 @@
 ---
 name: cs2-model-creation
-description: "创建或编辑 Counter-Strike 2 模型（.vmdl）：按 test 文件夹约定直接生成——kv3 头照抄，默认材质取 materials 下与 models 同路径的同名 vmat，没有就用同名 png/jpg/tga 生成。"
+description: "创建或编辑 Counter-Strike 2 模型（.vmdl）：按目标 addon 现有约定直接生成——kv3 头照抄，默认材质取 materials 下与 models 同路径的同名 vmat，没有就用同名 png/jpg/tga 生成。"
 ---
 
 # CS2 模型创作
 
-按目标 addon 约定（以 test 文件夹为准）直接生成 `.vmdl`，不跑多余流程。使用前提：Agent 已打开目标 addon 文件夹。
+按目标 addon 现有约定直接生成 `.vmdl`，不跑多余流程。使用前提：Agent 已打开目标 addon 文件夹。
 
 ## 规则
 
 1. **kv3 头照抄**：模板第一行 `<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc41:version{12fc9d44-453a-4ae4-b4d9-7e2ac0bbd4e0} -->` 原样保留；addon 现有 `.vmdl` 版本不同则以 addon 为准。
-2. **模型路径**：`RenderMeshFile.filename` / `PhysicsMeshFile.filename` 填相对 addon `content/` 根目录的路径（如 `models/test/test.fbx`）。
-3. **默认材质**：`DefaultMaterialGroup.remaps.to` 填 `materials/` 下与 models **同路径**的同名 vmat（`models/test/test.fbx` → `materials/test/test.vmat`）。
+2. **模型路径**：`RenderMeshFile.filename` / `PhysicsMeshFile.filename` 填相对 addon `content/` 根目录的路径（如 `models/<name>/<name>.fbx`）。
+3. **默认材质**：`DefaultMaterialGroup.remaps.to` 填 `materials/` 下与 models **同路径**的同名 vmat（`models/<name>/<name>.fbx` → `materials/<name>/<name>.vmat`）。
 4. **没有 vmat 时**：同路径找同名 png/jpg/tga；找到则触发 CS2 材质创作技能（cs2-material-creation）生成 vmat 后填入；找不到保持 `use_global_default`，不编造路径。
 
-## 模板（以 test.vmdl 为准）
+## 模板（kv3 头与结构以 addon 现有 .vmdl 为准）
 
 ```text
 <!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc41:version{12fc9d44-453a-4ae4-b4d9-7e2ac0bbd4e0} -->
@@ -34,7 +34,7 @@ description: "创建或编辑 Counter-Strike 2 模型（.vmdl）：按 test 文�
                         [
                             {
                                 from = "matid_1.vmat"
-                                to = "materials/test/test.vmat"
+                                to = "materials/<name>/<name>.vmat"
                             },
                         ]
                         use_global_default = false
@@ -48,7 +48,7 @@ description: "创建或编辑 Counter-Strike 2 模型（.vmdl）：按 test 文�
                 [
                     {
                         _class = "PhysicsMeshFile"
-                        name = "test"
+                        name = "<name>"
                         parent_bone = ""
                         surface_prop = "default"
                         collision_prop = "default"
@@ -56,7 +56,7 @@ description: "创建或编辑 Counter-Strike 2 模型（.vmdl）：按 test 文�
                         recenter_on_parent_bone = false
                         offset_origin = [ 0.0, 0.0, 0.0 ]
                         offset_angles = [ 0.0, 0.0, 0.0 ]
-                        filename = "models/test/test.fbx"
+                        filename = "models/<name>/<name>.fbx"
                         import_scale = 1.0
                         import_filter =
                         {
@@ -74,7 +74,7 @@ description: "创建或编辑 Counter-Strike 2 模型（.vmdl）：按 test 文�
                 [
                     {
                         _class = "RenderMeshFile"
-                        filename = "models/test/test.fbx"
+                        filename = "models/<name>/<name>.fbx"
                         import_scale = 1.0
                         import_filter =
                         {

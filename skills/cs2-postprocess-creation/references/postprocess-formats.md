@@ -1,6 +1,6 @@
 # 滤镜格式：`.vpost`
 
-## 规范模板（以 test.vpost 为准，含全部图层；kv3 头版本 GUID 与 addon 现有文件一致）
+## 规范模板（含全部图层；kv3 头版本 GUID 与 addon 现有文件一致）
 
 ```text
 <!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->

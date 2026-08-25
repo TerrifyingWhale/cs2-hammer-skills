@@ -19,7 +19,7 @@ description: "创建或编辑 Counter-Strike 2 纹理定义（.vtex），用于 
 ## 工作流
 
 1. 确定源图片路径与用途。
-2. 以 `materials/test.vtex` 为模板（见 [references/texture-formats.md](references/texture-formats.md)），只改 `m_fileName` 和 `m_colorSpace`。
+2. 以 addon 现有 `.vtex` 为模板（规范模板见 [references/texture-formats.md](references/texture-formats.md)），只改 `m_fileName` 和 `m_colorSpace`。
 3. 写入 `materials/`；Hammer 自动编译。
 
 ## 批量模式

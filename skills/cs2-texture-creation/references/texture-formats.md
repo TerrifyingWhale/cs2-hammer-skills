@@ -4,7 +4,7 @@
 
 `.vtex` 是纹理定义文件，描述"源图片 → 引擎纹理"的转换（源图路径、色彩空间、输出类型与压缩格式），由 Hammer 自动编译为 `.vtex_c`。
 
-## 规范模板（以 materials/test.vtex 为准）
+## 规范模板
 
 ```
 <!-- dmx encoding keyvalues2_noids 1 format vtex 1 -->
@@ -15,7 +15,7 @@
         "CDmeInputTexture"
         {
             "m_name" "string" "InputTexture0"
-            "m_fileName" "string" "materials/test.png"
+            "m_fileName" "string" "materials/<name>.png"
             "m_colorSpace" "string" "srgb"      // 法线/粗糙度/金属度等数据图用 linear
             "m_typeString" "string" "2D"
             "m_imageProcessorArray" "element_array"

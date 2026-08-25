@@ -1,6 +1,6 @@
 # 材质格式：`.vmat`
 
-## 规范模板（只写 csgo_complex，以 materials/test.vmat 为准）
+## 规范模板（只写 csgo_complex）
 
 检测到金属度/自发光等贴图或效果时的完整写法：
 

@@ -22,7 +22,7 @@
                 [
                     { _class = "RenderMeshFile"
                       name = "unnamed_1"
-                      filename = "models/test.dmx" }
+                      filename = "models/<name>.dmx" }
                 ]
             },
             {
@@ -30,8 +30,8 @@
                 children =
                 [
                     { _class = "AnimFile"
-                      name = "test_anim"
-                      source_filename = "models/test_anim.dmx"
+                      name = "<name>_anim"
+                      source_filename = "models/<name>_anim.dmx"
                       looping = false }
                 ]
             },
@@ -40,7 +40,7 @@
                 children =
                 [
                     { _class = "PhysicsHullFile"
-                      filename = "models/test_hull.dmx"
+                      filename = "models/<name>_hull.dmx"
                       surface_prop = "metal" }
                 ]
             },
