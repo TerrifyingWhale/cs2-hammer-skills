@@ -2,7 +2,7 @@
 
 ## 基本模板（直接生成 .vmdl 用这个）
 
-以 test.vmdl 为最基本的模板，**kv3 头永远一模一样**（第一行照抄，不许改动、不许换版本），其余只替换 `<name>` 与路径：
+**kv3 头永远一模一样**（第一行照抄，不许改动、不许换版本），其余只替换 `<name>` 与路径：
 
 ```text
 <!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc41:version{12fc9d44-453a-4ae4-b4d9-7e2ac0bbd4e0} -->

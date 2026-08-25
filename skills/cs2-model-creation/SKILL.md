@@ -16,7 +16,7 @@ description: "创建或编辑 Counter-Strike 2 模型（.vmdl）：按模板直�
 
 ## 模板
 
-最基本的模板（以 test.vmdl 为准）写在 [references/model-formats.md](references/model-formats.md) 里，生成时直接复制；kv3 头永远一模一样，只替换 `<name>` 与路径。
+最基本的模板写在 [references/model-formats.md](references/model-formats.md) 里，生成时直接复制；kv3 头永远一模一样，只替换 `<name>` 与路径。
 
 ## 生成步骤
 
