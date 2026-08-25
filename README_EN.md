@@ -53,6 +53,8 @@ This is not a prompt pack that only writes a few asset snippets — it is a comp
 4. **Generate**: produce asset recipe files per the relevant skill; Hammer auto-compiles on save
 5. **Verify**: run `scripts/check_skill_integrity.ps1` after editing skills; confirm maps in Hammer before delivery
 
+> Note: the map skill (cs2-hammer-mapping) gives advice and steps by default and does not modify files until you explicitly ask it to. Programmatic .vmap editing requires a backup and verification in Hammer.
+
 ## Quality gate
 
 Run the integrity check after modifying skills:

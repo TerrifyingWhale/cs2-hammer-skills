@@ -1,9 +1,6 @@
-# 滤镜格式：`.vpost` 与 Postprocessing Editor
+# 滤镜格式：`.vpost`
 
-## 是什么
-
-- `.vpost` 是 kv3 文本，根节点为 `CPostProcessData`，由 Postprocessing Editor 编辑，保存后由 Hammer 自动编译为 `.vpost_c`。
-- 规范模板（以 test.vpost 为准，包含全部图层；kv3 头部版本 GUID 与 addon 中现有文件保持一致）：
+## 规范模板（以 test.vpost 为准，含全部图层；kv3 头版本 GUID 与 addon 现有文件一致）
 
 ```text
 <!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
@@ -220,37 +217,17 @@
 }
 ```
 
-## 图层类型（test.vpost 全量）
-
-- `CBrightnessContrastColorCorrectionLayer`：亮度/对比。
-- `CVibranceColorCorrectionLayer`：饱和度/鲜艳度。
-- `CLevelsColorCorrectionLayer`：色阶（输入/输出黑白点、Gamma）。
-- `CLocalContrastLayer`：局部对比。
-- `CVignetteLayer`：暗角。
-- `CCurvesColorCorrectionLayer`：曲线。
-- `CHueSaturationColorCorrectionLayer`：色相/饱和度。
-- `CColorTintColorCorrectionLayer`：色调。
-- `CColorBalanceColorCorrectionLayer`：色彩平衡。
-- `CColorLookupColorCorrectionLayer`：查找表（LUT）。
-- `CBloomLayer`：泛光。
-- `CToneMappingLayer`：色调映射/曝光。
-
 ## 生成规则
 
-- **用不到哪个图层就不写对应的字段块**；需要多个图层时按 `m_layers` 数组顺序排列。
+- **用不到哪个图层就不写对应字段块**；需要多个时按 `m_layers` 顺序排列。
 - 每层有 `m_nOpacityPercent`（透明度）、`m_bVisible`（可见性）、`m_pLayerMask`（可选遮罩）。
-- 复杂参数（如 Bloom 的 blur 权重、Curves 的曲线点）在需要调整时才改；不需要的图层整块省略。
+- 复杂参数（Bloom 权重、Curves 曲线点）在需要调整时才改。
 
-## 挂载到地图
+## 挂载与生效
 
-- 用 `post_processing_volume` 实体指定 `.vpost` 路径，并控制体积范围与过渡。
-- 不同区域可以用不同 volume 给不同滤镜；多个 volume 重叠时注意优先级/过渡。
-- 命名：滤镜文件通常放在 `postprocess/` 目录，建议按用途命名（如 `mapname.vpost`、`under_water.vpost`），沿用 addon 现有约定。
-
-## 在 Hammer 中生效
-
-- 保存/打开时 Hammer 会自动编译资源，无需手动编译。
-- 在游戏中确认滤镜生效；若不生效，检查 post_processing_volume 的设置与 `.vpost` 路径。
+- 用 `post_processing_volume` 实体指定 `.vpost` 路径，控制体积范围与过渡；多个 volume 重叠注意优先级。
+- 文件通常放 `postprocess/`，按用途命名（如 `under_water.vpost`），沿用 addon 现有约定。
+- Hammer 自动编译；不生效时检查 volume 设置与 `.vpost` 路径。
 
 ## 官方文档
 
