@@ -14,7 +14,7 @@ description: "创建或编辑 Counter-Strike 2 粒子系统（.vpcf），用于 
 3. "粒子贴图用什么？(已有素材还是从 addon 现有系统复制)"
 4. "持续播放还是触发一次？循环吗？"
 
-**不要逐项细问节点参数**：先找 addon `particles/` 里最接近的效果作模板复制改造；只对贴图、数量、生命周期、触发方式提问。
+**不要逐项细问节点参数**：按用户需求自己写，addon 现有 `particles/` 里的 `.vpcf` 只作参考；只对贴图、数量、生命周期、触发方式提问。
 
 ## 粒子系统组件
 
@@ -23,9 +23,9 @@ description: "创建或编辑 Counter-Strike 2 粒子系统（.vpcf），用于 
 
 ## 工作流
 
-1. 找最接近的 `.vpcf` 作模板（**kv3 头永远一模一样**，照抄第一行，不许改动、不许换版本）。
+1. 按用户需求与回答确定效果参数（数量、生命周期、贴图、触发方式）。
 2. 提问；批量任务走批量模式。
-3. 用 Particle Editor 调整或手写 `.vpcf`；子粒子用 `resource:"particles/..."` 引用。
+3. 参考 addon 现有 `particles/` 的 `.vpcf` 写法（**kv3 头永远一模一样**，照抄第一行，不许改动、不许换版本），手写或 Particle Editor 调整 `.vpcf`；子粒子用 `resource:"particles/..."` 引用。
 4. 地图中用 `info_particle_system` 放置，`particle_system_name` 填相对路径；Hammer 自动编译。
 
 ## 批量模式
