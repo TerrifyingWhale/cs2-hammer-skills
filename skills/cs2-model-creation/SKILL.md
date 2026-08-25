@@ -30,5 +30,5 @@ description: "创建或编辑 Counter-Strike 2 模型（.vmdl）：按模板直�
 
 ## References
 
-- [references/model-formats.md](references/model-formats.md) - 基本模板 + 复杂模型属性与 ModelDoc 工作流
+- [references/model-formats.md](references/model-formats.md) - 基本模板（复杂需求一句话说明）
 - 官方：[VMDL](https://developer.valvesoftware.com/wiki/VMDL)、[Modeling](https://developer.valvesoftware.com/wiki/Counter-Strike_2_Workshop_Tools/Modeling)
