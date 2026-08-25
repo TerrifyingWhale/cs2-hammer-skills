@@ -16,9 +16,9 @@ description: "创建或编辑 Counter-Strike 2 滤镜（.vpost），用于 Sourc
 
 ## 生成规则
 
-- 规范模板包含全部图层类型（见 [references/postprocess-formats.md](references/postprocess-formats.md)）；kv3 头与结构以 addon 现有 `.vpost` 为准。
+- 规范模板包含全部图层类型（见 [references/postprocess-formats.md](references/postprocess-formats.md)）；结构以 addon 现有 `.vpost` 为准。
 - **用不到哪个图层就不写对应字段块**；需要多个时按 `m_layers` 顺序排列。
-- kv3 头部照抄（版本与 addon 现有文件一致）。
+- **kv3 头永远一模一样**：第一行原样照抄，不许改动、不许换版本。
 
 ## 工作流
 

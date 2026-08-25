@@ -4,7 +4,7 @@
 
 `.vpcf` 是 kv3 文本，根节点 `CParticleSystemDefinition`，由 Particle Editor 编辑，Hammer 自动编译为 `.vpcf_c`。
 
-结构示例（kv3 头版本 GUID 以 addon 现有文件为准）：
+结构示例（**kv3 头永远一模一样**——与 `.vmdl` 同理，第一行原样照抄，不许改动、不许换版本）：
 
 ```text
 <!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vpcf63:version{a6e6a69e-52d3-4527-8b9c-ff3bb91aca3e} -->
@@ -64,7 +64,7 @@
 
 - 文件放 `particles/`，可按主题分子目录；贴图通常由 `.vtex` 定义（cs2-texture-creation）。
 - 地图用 `info_particle_system` 放置，`particle_system_name` 填 `.vpcf` 相对路径。
-- 不生效时检查粒子贴图路径、子粒子引用和 kv3 头版本 GUID。
+- 不生效时检查粒子贴图路径、子粒子引用（kv3 头永远一模一样，不要改动）。
 
 ## 官方文档
 

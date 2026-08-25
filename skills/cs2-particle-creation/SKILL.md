@@ -23,7 +23,7 @@ description: "创建或编辑 Counter-Strike 2 粒子系统（.vpcf），用于 
 
 ## 工作流
 
-1. 找最接近的 `.vpcf` 作模板（保留 kv3 版本 GUID）。
+1. 找最接近的 `.vpcf` 作模板（**kv3 头永远一模一样**，照抄第一行，不许改动、不许换版本）。
 2. 提问；批量任务走批量模式。
 3. 用 Particle Editor 调整或手写 `.vpcf`；子粒子用 `resource:"particles/..."` 引用。
 4. 地图中用 `info_particle_system` 放置，`particle_system_name` 填相对路径；Hammer 自动编译。
