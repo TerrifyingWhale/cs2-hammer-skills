@@ -10,7 +10,6 @@
 
 - 官方类型定义：`content/csgo/maps/editor/zoo/scripts/point_script.d.ts`（从 addon 向上两级到 `content/` 再进入该路径）。
 - 完整记录 `Instance`、事件回调、实体操作等签名与参数类型；不确定时先查它，不凭记忆编字段。
-- 把 `point_script.d.ts` 和同目录 `tsconfig.json` 复制到脚本目录旁，编辑器可提供补全与类型检查。
 
 ## 挂载
 
