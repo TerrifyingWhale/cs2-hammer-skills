@@ -64,6 +64,7 @@ $requiredFiles = @(
     "GEMINI.md",
     "CHANGELOG.md",
     "README.md",
+    "README_EN.md",
     "LICENSE",
     ".codex/INSTALL.md",
     ".opencode/INSTALL.md",
@@ -99,14 +100,18 @@ foreach ($s in $skills) {
 }
 
 Assert-Contains "README.md" "using-cs2-mapping" "README mentions entry skill"
+Assert-Contains "README_EN.md" "using-cs2-mapping" "English README mentions entry skill"
 Assert-Contains "AGENTS.md" "using-cs2-mapping" "AGENTS mentions entry skill"
 Assert-Contains "CLAUDE.md" "using-cs2-mapping" "CLAUDE mentions entry skill"
+Assert-Contains "README_EN.md" "cs2-hammer-mapping" "English README mentions map skill"
+Assert-Contains "README_EN.md" "check_skill_integrity\.ps1" "English README mentions integrity check"
 
 # 5. Platform and version consistency
 Assert-Contains ".claude-plugin/plugin.json" '"version":\s*"1\.0\.0"' "Claude plugin version matches current skill"
 Assert-Contains ".cursor-plugin/plugin.json" '"version":\s*"1\.0\.0"' "Cursor plugin version matches current skill"
 Assert-Contains "CHANGELOG.md" "\[1\.0\.0\]" "changelog contains current version"
 Assert-Contains "README.md" "1\.0\.0" "README version current"
+Assert-Contains "README_EN.md" "1\.0\.0" "English README version current"
 Assert-Contains "hooks/hooks.json" "run-hook\.cmd" "hooks.json wires Windows runner"
 Assert-Contains "hooks/hooks-cursor.json" "session-start" "cursor hooks wire session-start"
 
