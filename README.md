@@ -46,7 +46,7 @@
 ## 标准协作流程（推荐）
 
 1. 入口路由：说"帮我做 CS2 地图/材质/模型…"，套件会先调用 `using-cs2-mapping` 确定流程
-2. 检查 addon：Agent 已打开目标 addon 文件夹，先看现有文件结构与模板
+2. 检查 addon：Agent 已打开目标 addon 文件夹，先按对应 reference 规范写，addon 现有文件仅作参考
 3. 提问确认：专项技能先问必要问题（用途、贴图来源、批量设置），批量任务只问一次
 4. 执行生成：按对应技能生成资产配方文件，保存后 Hammer 自动编译
 5. 验证：修改技能后运行 `scripts/check_skill_integrity.ps1`；地图交付前在 Hammer 中打开确认

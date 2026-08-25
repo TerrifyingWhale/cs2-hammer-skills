@@ -1,6 +1,6 @@
 # 材质格式：`.vmat`
 
-## 规范模板（csgo_complex，语法以 addon 现有 .vmat 为准）
+## 规范模板（csgo_complex）
 
 - **不要加 kv3 头**：vmat 与 vtex/vpcf/vpost 不同，直接以 `Layer0` 开头；键名不引号、值用引号（如 `shader "csgo_complex.vfx"`）。
 - **标志位非必须**：检测到对应贴图或效果才写 `F_` 标志位，并且下方才有对应语句；没检测到就整块省略。

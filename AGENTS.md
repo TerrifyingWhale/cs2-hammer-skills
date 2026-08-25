@@ -28,7 +28,7 @@
 - 任何地图/资产任务前先调用 `using-cs2-mapping` 确定流程
 - 使用前提：Agent 已打开目标 addon 文件夹，不询问"用在哪张地图/哪个 addon"
 - 资产配方文件（.vmat/.vtex/.vmdl/.vpcf/.vpost/.vsndevts）由 Hammer 自动编译，不手动编译
-- kv3 文件头版本 GUID 从 addon 现有文件复制，不凭记忆手写
+- kv3 文件头版本 GUID 按 reference 模板写，不凭记忆手写
 - 批量资产生成走批量模式，公共设置只问一次
 - skill 改造后运行 `scripts/check_skill_integrity.ps1`
 - 不编造资产格式与实体属性，以官方文档和本地 SDK 文件为准

@@ -39,7 +39,7 @@ description: "使用 Source 2 Hammer（CS2 Workshop Tools）创建、编辑、�
 
 - `.vmap` 是二进制 DMX；直接搜原始文件会误导，先转文本。
 - 资产配方由 Hammer 自动编译，不手动编译。
-- 格式随 SDK 版本变化，以 addon 现有文件为准；官方文档优先（wiki 有反爬保护，可直接给链接）。
+- 格式随 SDK 版本变化，生成时先按对应 reference 模板，不生效再对照 addon 现有文件排查；官方文档优先（wiki 有反爬保护，可直接给链接）。
 
 ## References
 

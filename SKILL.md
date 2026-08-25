@@ -11,7 +11,7 @@ allowed-tools: Read Write Edit Bash WebSearch
 ## 原则
 
 - 流程优先：先检查 addon、先提问，再动手
-- 模板优先：kv3 头与写法从 addon 现有文件复制
+- 规范优先：按 reference 模板写，addon 现有文件仅作参考
 - 文档优先：以官方文档与本地 SDK 类型定义为权威
 - 验证优先：交付前运行完整性脚本
 
@@ -43,9 +43,9 @@ allowed-tools: Read Write Edit Bash WebSearch
 
 | AI 的想法 | 正确做法 |
 |---|---|
-| "用户说得很清楚了，直接生成" | 先调用入口技能，再检查 addon 现有模板 |
+| "用户说得很清楚了，直接生成" | 先调用入口技能，按对应 reference 规范生成 |
 | "PNG 直接放进去就能用" | 需要 `.vmat`/`.vtex` 配方文件 |
-| "kv3 头我默写一个" | 从 addon 现有文件复制版本 GUID |
+| "kv3 头我默写一个" | 从 reference 模板复制版本 GUID |
 | "直接改二进制 .vmap" | 地图技能默认只给建议；用户确认后才修改 |
 | "这个 API/属性凭记忆写" | 查官方文档与本地 SDK 类型定义 |
 

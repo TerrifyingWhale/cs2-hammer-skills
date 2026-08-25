@@ -25,5 +25,5 @@ content/csgo_addons/<addon>/
 使用约定：
 
 - 资产配方文件（`.vmat` / `.vtex` / `.vmdl` / `.vpcf` / `.vpost` / `.vsndevts`）保存后由 Hammer 自动编译，无需手动运行编译器。
-- kv3 文件头版本 GUID 从 addon 中同类型的现有文件复制，不要凭记忆手写。
-- 编写任何新资产前，先在 addon 中找一个同类型的现有文件作为模板。
+- kv3 文件头版本 GUID 按 reference 模板写，不要凭记忆手写。
+- 编写任何新资产前，先按对应 reference 规范写；addon 现有文件仅作参考。

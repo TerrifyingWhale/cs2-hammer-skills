@@ -20,9 +20,9 @@ description: "创建或编辑 Counter-Strike 2 材质（.vmat），用于 Source
 
 ## 工作流
 
-1. 扫描 addon 现有 `.vmat`（着色器、语法风格、纹理命名规则）。
+1. 按 reference 模板写；可参考 addon 现有 `.vmat` 的纹理命名规则。
 2. 提问；批量任务走批量模式。
-3. 按模板生成 `.vmat`（**不要加 kv3 头，直接以 `Layer0` 开头，写法照抄 addon 现有 `.vmat`**），写入 `materials/`；保存后 Hammer 自动编译。
+3. 按模板生成 `.vmat`（**不要加 kv3 头，直接以 `Layer0` 开头，写法按 reference 模板**），写入 `materials/`；保存后 Hammer 自动编译。
 
 ## 批量模式
 

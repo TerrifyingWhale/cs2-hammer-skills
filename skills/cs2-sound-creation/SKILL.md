@@ -33,7 +33,7 @@ description: "创建或编辑 Counter-Strike 2 自定义声音（.vsndevts 事�
 1. 公共设置只问一次（循环/定位/音量）。
 2. 接受规则文件（文件名 → 事件名 → 类型/循环/音量）。
 3. 一次性输出全部事件定义与文件清单。
-4. 命名与组织以 addon 现有 `soundevents/`、`sounds/` 为准。
+4. 命名与组织按需求与惯例，addon 现有目录仅作参考。
 
 ## References
 

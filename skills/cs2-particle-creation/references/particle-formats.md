@@ -58,7 +58,7 @@
 | 约束 Constraints | [Constraints](https://developer.valvesoftware.com/wiki/Particle_System_Constraints) | 通常为 `C_OP_*` 放 `m_Operators` |
 | 子粒子 Children | [Children](https://developer.valvesoftware.com/wiki/Particle_System_Children) | `m_Children` |
 
-属性写法：节点 `_class = "C_..."` + `m_*` 字段（`m_fl*` float、`m_n*` int、`m_b*` bool、`m_v*` vector、`m_*Array` 数组）。数值类属性常包值类型对象（`PF_TYPE_LITERAL`、`PF_TYPE_RANDOM_RANGE`）；具体写法从 addon 现有 `.vpcf` 复制最稳妥，不确定就问用户。
+属性写法：节点 `_class = "C_..."` + `m_*` 字段（`m_fl*` float、`m_n*` int、`m_b*` bool、`m_v*` vector、`m_*Array` 数组）。数值类属性常包值类型对象（`PF_TYPE_LITERAL`、`PF_TYPE_RANDOM_RANGE`）；具体写法参考 addon 现有 `.vpcf`，不确定就问用户。
 
 ## 命名与挂载
 
