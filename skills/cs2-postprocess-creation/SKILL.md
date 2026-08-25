@@ -16,15 +16,15 @@ description: "创建或编辑 Counter-Strike 2 滤镜（.vpost），用于 Sourc
 
 ## 生成规则
 
-- 规范模板包含全部图层类型（见 [references/postprocess-formats.md](references/postprocess-formats.md)）；结构以 addon 现有 `.vpost` 为准。
+- 全部图层类型与写法见 [references/postprocess-formats.md](references/postprocess-formats.md)（规范模板，仅作参考）；按用户需求只写需要的图层。
 - **用不到哪个图层就不写对应字段块**；需要多个时按 `m_layers` 顺序排列。
 - **kv3 头永远一模一样**：第一行原样照抄，不许改动、不许换版本。
 
 ## 工作流
 
-1. 找 addon `postprocess/` 里最接近的 `.vpost` 作模板。
+1. 按用户需求与回答确定效果（图层类型、强度、范围）。
 2. 提问；批量任务走批量模式。
-3. 按模板生成，只保留需要的图层；或用 Postprocessing Editor 调整。
+3. 参考 addon 现有 `postprocess/` 的 `.vpost` 写法（**kv3 头永远一模一样**，照抄第一行，不许改动、不许换版本），按需求手写或 Postprocessing Editor 调整，只保留需要的图层。
 4. 地图中放 `post_processing_volume` 指定 `.vpost`，设置范围与过渡；Hammer 自动编译。
 
 ## References
