@@ -4,7 +4,7 @@
 
 `.vpcf` 是 kv3 文本，根节点 `CParticleSystemDefinition`，由 Particle Editor 编辑，Hammer 自动编译为 `.vpcf_c`。
 
-结构示例（**kv3 头永远一模一样**——与 `.vmdl` 同理，第一行原样照抄，不许改动、不许换版本）：
+结构示例（**kv3 头永远一模一样**：第一行原样照抄，不许改动、不许换版本）：
 
 ```text
 <!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vpcf63:version{a6e6a69e-52d3-4527-8b9c-ff3bb91aca3e} -->

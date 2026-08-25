@@ -5,7 +5,7 @@ description: "创建或编辑 Counter-Strike 2 模型（.vmdl）：按模板直�
 
 # CS2 模型创作
 
-按模板直接生成 `.vmdl`，不跑多余流程。使用前提：Agent 已打开目标 addon 文件夹。
+创建/编辑 `.vmdl`，按模板直接生成。使用前提：Agent 已打开目标 addon 文件夹。
 
 ## 规则
 

@@ -5,7 +5,7 @@ description: "创建或编辑 Counter-Strike 2 自定义声音（.vsndevts 事�
 
 # CS2 声音创作
 
-把音频接进 addon：`soundevents_addon.vsndevts` 定义事件 + `sounds/` 音频源。使用前提：Agent 已打开目标 addon 文件夹。
+创建/编辑自定义声音：`soundevents_addon.vsndevts` 定义事件 + `sounds/` 音频源。使用前提：Agent 已打开目标 addon 文件夹。
 
 ## 先提问
 
@@ -30,7 +30,10 @@ description: "创建或编辑 Counter-Strike 2 自定义声音（.vsndevts 事�
 
 ## 批量模式
 
-公共设置只问一次（循环/定位/音量）；接受规则文件；一次性输出全部事件与清单。
+1. 公共设置只问一次（循环/定位/音量）。
+2. 接受规则文件（文件名 → 事件名 → 类型/循环/音量）。
+3. 一次性输出全部事件定义与文件清单。
+4. 命名与组织以 addon 现有 `soundevents/`、`sounds/` 为准。
 
 ## References
 

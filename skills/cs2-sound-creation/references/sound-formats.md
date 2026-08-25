@@ -54,3 +54,7 @@
 
 - 音频源按类型分目录（`sounds/ambient/`、`sounds/music/` 等），沿用 addon 现有结构。
 - 地图用 `point_soundevent` 等实体按事件名触发；Hammer 自动编译。
+
+## 官方文档
+
+- [Addon Sounds](https://developer.valvesoftware.com/wiki/Counter-Strike_2_Workshop_Tools/Addon_Sounds)

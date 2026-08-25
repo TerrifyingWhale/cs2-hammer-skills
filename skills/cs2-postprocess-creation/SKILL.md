@@ -23,9 +23,16 @@ description: "创建或编辑 Counter-Strike 2 滤镜（.vpost），用于 Sourc
 ## 工作流
 
 1. 找 addon `postprocess/` 里最接近的 `.vpost` 作模板。
-2. 提问。
+2. 提问；批量任务走批量模式。
 3. 按模板生成，只保留需要的图层；或用 Postprocessing Editor 调整。
 4. 地图中放 `post_processing_volume` 指定 `.vpost`，设置范围与过渡；Hammer 自动编译。
+
+## 批量模式
+
+1. 公共设置只问一次（场景、效果、范围、强度）。
+2. 接受规则文件或文件夹默认值。
+3. 一次性输出全部 `.vpost` 文件清单与内容。
+4. 能推断的不要问（以 addon 现有 `postprocess/` 为准）。
 
 ## References
 

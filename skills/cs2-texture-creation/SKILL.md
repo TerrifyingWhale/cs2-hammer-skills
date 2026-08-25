@@ -5,7 +5,7 @@ description: "创建或编辑 Counter-Strike 2 纹理定义（.vtex），用于 
 
 # CS2 纹理创作
 
-编写 `.vtex` 把 PNG/TGA/JPG 配置成引擎纹理。使用前提：Agent 已打开目标 addon 文件夹。
+创建/编辑 `.vtex`（把 PNG/TGA/JPG 配置成引擎纹理）。使用前提：Agent 已打开目标 addon 文件夹。
 
 ## 先提问
 
@@ -24,7 +24,10 @@ description: "创建或编辑 Counter-Strike 2 纹理定义（.vtex），用于 
 
 ## 批量模式
 
-公共设置只问一次（色彩空间规则、压缩格式）；接受命名约定（如 `_Normal`/`_n` → linear）；一次性输出全部文件。
+1. 公共设置只问一次（色彩空间规则、压缩格式）。
+2. 接受命名约定（如 `_Normal`/`_n` → linear）。
+3. 一次性输出全部 `.vtex` 文件清单与内容。
+4. 能推断的不要问（以 addon 现有 `.vtex` 为准）。
 
 ## References
 

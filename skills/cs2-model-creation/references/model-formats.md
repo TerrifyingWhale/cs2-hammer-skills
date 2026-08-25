@@ -90,10 +90,14 @@
 - 模型路径 `models/<name>.fbx` 相对 addon 的 `content/` 根目录，大小写与磁盘一致。
 - 默认材质 `DefaultMaterialGroup.remaps.to` = `materials/<name>.vmat`；没有同名 vmat 时在 `materials/` 下找同名 png/jpg/tga，找到则触发 CS2 材质创作技能（cs2-material-creation）生成后再填入；都没有保持 `use_global_default`。
 
-## 复杂需求（一句话）
+## 复杂需求
 
 骨骼/动画/LOD/多网格/多材质组/碰撞等复杂结构用 ModelDoc 导入 FBX/DMX 处理，需要时查官方 [VMDL](https://developer.valvesoftware.com/wiki/VMDL) 文档；SMD 是 Source 1 旧格式，不要手工转。
 
 ## 备注
 
 - Hammer 自动编译，不手动编译；不生效时检查引用的 `.fbx`/`.dmx` 路径与 kv3 头。
+
+## 官方文档
+
+- [VMDL](https://developer.valvesoftware.com/wiki/VMDL)、[Modeling](https://developer.valvesoftware.com/wiki/Counter-Strike_2_Workshop_Tools/Modeling)
