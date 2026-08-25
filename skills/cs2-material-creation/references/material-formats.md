@@ -1,46 +1,122 @@
 # 材质格式：`.vmat`
 
-## 规范模板（只写 csgo_complex，写法以 addon 现有 .vmat 为准）
+## 规范模板（csgo_complex，语法以 addon 现有 .vmat 为准）
 
-检测到金属度/自发光等贴图或效果时的完整写法：
+- **不要加 kv3 头**：vmat 与 vtex/vpcf/vpost 不同，直接以 `Layer0` 开头；键名不引号、值用引号（如 `shader "csgo_complex.vfx"`）。
+- **PBR 标志位非必须**：只有勾选（或检测到对应贴图/效果）才写 `F_` 标志位，并且下方才有对应语句；没勾选就整块省略。
 
-```
+全部勾选 PBR 时的完整写法（对应 test.vmat 结构）：
+
+```text
 // THIS FILE IS AUTO-GENERATED
 
 Layer0
 {
 	shader "csgo_complex.vfx"
 
+	//---- PBR（勾选才加）----
 	F_ANISOTROPIC_GLOSS 1
 	F_METALNESS_TEXTURE 1
 	F_SELF_ILLUM 1
 	F_TRANSMISSIVE_BACKFACE_NDOTL 1
 
+	//---- Ambient Occlusion ----
 	TextureAmbientOcclusion "materials/<name>_AO.jpg"
+
+	//---- Color ----
+	g_flModelTintAmount "1.000"
+	g_flTexCoordRotation "0.000"
+	g_nScaleTexCoordUByModelScaleAxis "0" // None
+	g_nScaleTexCoordVByModelScaleAxis "0" // None
+	g_vColorTint "[1.000000 1.000000 1.000000 0.000000]"
+	g_vTexCoordCenter "[0.500 0.500]"
+	g_vTexCoordOffset "[0.000 0.000]"
+	g_vTexCoordScale "[1.000 1.000]"
+	g_vTexCoordScrollSpeed "[0.000 0.000]"
 	TextureColor "materials/<name>_BaseColor.jpg"
+
+	//---- Fog ----
+	g_bFogEnabled "1"
+
+	//---- Lighting ----
 	TextureMetalness "materials/<name>_Metalness.jpg"
 	TextureRoughness "materials/<name>_Roughness.jpg"
+
+	//---- Normal Map ----
 	TextureNormal "materials/<name>_Normal.jpg"
+
+	//---- Self Illum（勾选 F_SELF_ILLUM 才有）----
+	g_flSelfIllumAlbedoFactor "1.000"
+	g_flSelfIllumBrightness "0.000"
+	g_flSelfIllumScale "1.000"
+	g_vSelfIllumScrollSpeed "[0.000 0.000]"
+	g_vSelfIllumTint "[1.000000 1.000000 1.000000 0.000000]"
 	TextureSelfIllumMask "materials/<name>_Emissive.jpg"
+
+	//---- Texture Address Mode ----
+	g_nTextureAddressModeU "0" // Wrap
+	g_nTextureAddressModeV "0" // Wrap
+
+	//---- Transmission（勾选 F_TRANSMISSIVE_BACKFACE_NDOTL 才有）----
+	TextureTransmissiveColor "materials/<name>_Color.jpg"
+
+	UnusedVariables
+	{
+		"g_flMetalness" "0"
+	}
 }
 ```
 
-什么都没检测到时的默认写法（不加标志位）：
+什么都没勾选时的默认写法（去掉 PBR 段与对应语句）：
 
-```
+```text
 Layer0
 {
 	shader "csgo_complex.vfx"
 
-	g_flMetalness "0.000"
-	TextureColor "materials/<name>_BaseColor.jpg"
-	TextureRoughness "materials/<name>_Roughness.jpg"
-	TextureNormal "materials/<name>_Normal.jpg"
+	//---- Ambient Occlusion ----
 	TextureAmbientOcclusion "materials/<name>_AO.jpg"
+
+	//---- Color ----
+	g_flModelTintAmount "1.000"
+	g_flTexCoordRotation "0.000"
+	g_nScaleTexCoordUByModelScaleAxis "0" // None
+	g_nScaleTexCoordVByModelScaleAxis "0" // None
+	g_vColorTint "[1.000000 1.000000 1.000000 0.000000]"
+	g_vTexCoordCenter "[0.500 0.500]"
+	g_vTexCoordOffset "[0.000 0.000]"
+	g_vTexCoordScale "[1.000 1.000]"
+	g_vTexCoordScrollSpeed "[0.000 0.000]"
+	TextureColor "materials/<name>_BaseColor.jpg"
+
+	//---- Fog ----
+	g_bFogEnabled "1"
+
+	//---- Lighting ----
+	TextureRoughness "materials/<name>_Roughness.jpg"
+
+	//---- Normal Map ----
+	TextureNormal "materials/<name>_Normal.jpg"
+
+	//---- Texture Address Mode ----
+	g_nTextureAddressModeU "0" // Wrap
+	g_nTextureAddressModeV "0" // Wrap
+
+	UnusedVariables
+	{
+		"g_flMetalness" "0"
+	}
 }
 ```
 
-**不要加 kv3 头**：vmat 与 vtex/vpcf/vpost 不同，直接以 `Layer0` 开头；键名不引号、值用引号（如 `shader "csgo_complex.vfx"`）。生成后先在 Material Editor / Hammer 中打开确认，`Invalid value` 报错通常是头部或写法不对。
+PBR 标志位与对应语句：
+
+| `F_` 标志位 | 对应语句 |
+|---|---|
+| F_ANISOTROPIC_GLOSS | 各向异性高光（配合 Gloss 类贴图） |
+| F_METALNESS_TEXTURE | Lighting 组的 `TextureMetalness` |
+| F_SELF_ILLUM | Self Illum 整组 + `TextureSelfIllumMask` |
+| F_TRANSMISSIVE_BACKFACE_NDOTL | Transmission 组的 `TextureTransmissiveColor` |
 
 常用槽位：`TextureColor`、`TextureNormal`、`TextureRoughness`、`TextureMetalness`、`TextureAmbientOcclusion`、`TextureSelfIllumMask`。向量值用带引号的 `[x y z w]`，标量用带引号的数字。没有对应贴图时**不加标志位、不加空槽位**。
 
