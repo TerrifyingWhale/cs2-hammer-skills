@@ -2,7 +2,7 @@
 
 ## 是什么
 
-- `cs_script` 使用标准 JavaScript（`.js`，ES Module）。源文件放 `scripts/vscripts/`；`point_script` 实体的 `cs_script` 属性引用编译后的 `.vjs`（源文件 `.js`）。
+- `cs_script` 使用标准 JavaScript（`.js`，ES Module）。源文件放 `scripts/vscripts/`；`point_script` 实体的 `cs_script` 属性直接引用 `.js` 脚本。
 - 官方模块导入：`import { Instance } from "cs_script/point_script";`。
 - 只依据官方 API 与用户需求生成，不套用真实案例。
 
@@ -14,7 +14,7 @@
 
 ## 挂载
 
-- `point_script` 实体 `cs_script` 填 `scripts/vscripts/<name>.vjs`；设置 `targetname` 供引用。
+- `point_script` 实体 `cs_script` 填 `scripts/vscripts/<name>.js`；设置 `targetname` 供引用。
 - 进游戏测试；控制台/日志中的脚本错误是主要排查手段。
 
 ## 官方文档

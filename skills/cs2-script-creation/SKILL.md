@@ -23,7 +23,7 @@ description: "创建或编辑 Counter-Strike 2 脚本（cs_script，JavaScript .
 1. 检查 addon `scripts/vscripts/` 与地图里的 `point_script` 挂载（确认路径约定）。
 2. 提问；批量任务走批量模式。
 3. 打开 `point_script.d.ts` 确认 API，编写 `.js` 放入 `scripts/vscripts/`。
-4. Hammer 放 `point_script`，`cs_script` 填 `scripts/vscripts/<name>.vjs`。
+4. Hammer 放 `point_script`，`cs_script` 填 `scripts/vscripts/<name>.js`。
 5. 游戏内 `map <mapname>` 测试。
 
 ## 批量模式
