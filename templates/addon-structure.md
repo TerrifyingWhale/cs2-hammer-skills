@@ -18,8 +18,10 @@ content/csgo_addons/<addon>/
 ├── soundevents/                # 声音事件定义
 │   └── soundevents_addon.vsndevts
 ├── sounds/                     # 音频源文件（mp3/wav 等）
-└── scripts/
-    └── vscripts/               # cs_script 源文件（.js）
+├── scripts/                    # cs_script 源文件（.js）
+└── panorama/
+    ├── layout/custom_game/     # 自定义 HUD 布局（XML）
+    └── styles/custom_game/     # 自定义 HUD 样式（CSS）
 ```
 
 使用约定：

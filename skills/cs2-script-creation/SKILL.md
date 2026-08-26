@@ -22,7 +22,8 @@ description: "创建或编辑 Counter-Strike 2 脚本（cs_script，JavaScript .
 
 1. 定位本地 `point_script.d.ts`（`content/csgo/maps/editor/zoo/scripts/point_script.d.ts`）。
 2. 提问；批量任务走批量模式。
-3. 依据 API 签名编写 `.js`，放入 addon 的 `scripts/vscripts/`。
+3. 依据 API 签名编写 `.js`，放入 addon 的 `scripts/`。
+4. 涉及自定义 HUD（custom_hud_layout）时：布局 XML 放 `panorama/layout/custom_game/`，样式 CSS 放 `panorama/styles/custom_game/`。
 
 ## 批量模式
 
@@ -35,3 +36,4 @@ description: "创建或编辑 Counter-Strike 2 脚本（cs_script，JavaScript .
 
 - [references/script-formats.md](references/script-formats.md) - 语言与本地 API 参考
 - 官方：[Scripting API](https://developer.valvesoftware.com/wiki/Counter-Strike_2_Workshop_Tools/Scripting/API)
+

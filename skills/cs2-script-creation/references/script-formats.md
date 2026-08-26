@@ -2,9 +2,15 @@
 
 ## 是什么
 
-- `cs_script` 使用标准 JavaScript（`.js`，ES Module）。源文件放 `scripts/vscripts/`。
+- `cs_script` 使用标准 JavaScript（`.js`，ES Module）。
 - 官方模块导入：`import { Instance } from "cs_script/point_script";`。
 - 只依据官方 API 与用户需求生成，不套用真实案例。
+
+## 文件位置
+
+- 脚本 `.js` → `scripts/`。
+- 自定义 HUD 布局 XML → `panorama/layout/custom_game/`。
+- 自定义 HUD 样式 CSS → `panorama/styles/custom_game/`。
 
 ## 本地 API 参考（编写时以它为准）
 
@@ -15,3 +21,4 @@
 ## 官方文档
 
 - [Scripting API](https://developer.valvesoftware.com/wiki/Counter-Strike_2_Workshop_Tools/Scripting/API)
+
