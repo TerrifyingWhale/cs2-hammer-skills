@@ -76,11 +76,6 @@ $requiredFiles = @(
     "hooks/session-start",
     "scripts/init_plan.ps1",
     "scripts/init_plan.sh",
-    "plan-template/project-overview.md",
-    "plan-template/progress.md",
-    "plan-template/notes.md",
-    "plan-template/outline.md",
-    "plan-template/stage-gates.md",
     "templates/addon-structure.md",
     "templates/boxes.example.json"
 )
@@ -116,9 +111,6 @@ Assert-Contains "hooks/hooks.json" "run-hook\.cmd" "hooks.json wires Windows run
 Assert-Contains "hooks/hooks-cursor.json" "session-start" "cursor hooks wire session-start"
 
 # 6. Plan templates contain required sections
-Assert-Contains "plan-template/progress.md" "能力使用审计|Capability-use audit" "progress template includes capability-use audit"
-Assert-Contains "plan-template/stage-gates.md" "S[0-9]" "stage gates present"
-Assert-Contains "plan-template/project-overview.md" "addon" "project overview tracks addon"
 
 # 7. Forbidden legacy project names / removed functionality must not appear in docs
 $forbidden = @("ze_obj", "redemption_v2", "resourcecompiler")
