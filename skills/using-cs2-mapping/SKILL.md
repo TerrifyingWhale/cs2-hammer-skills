@@ -17,7 +17,7 @@ description: Use when starting any Counter-Strike 2 map creation task - establis
 2. **本套件技能**
 3. **默认系统提示**（最低）
 
-用户说"不用问，直接生成"可简化流程，但仍需在 `plan/progress.md` 记录。
+用户说"不用问，直接生成"可简化流程。
 
 ## 核心规则
 
@@ -30,7 +30,7 @@ description: Use when starting any Counter-Strike 2 map creation task - establis
 ## 标准流程
 
 1. 判断任务类型：地图级 → `cs2-hammer-mapping`（**默认只给建议，不修改文件**；用户明确要求修改才执行）；单一资产 → 对应专项技能。
-2. 按对应 reference 规范写（addon 现有文件仅作参考）→ 提问关键差异 → 执行 → 更新 `plan/progress.md` → 请用户确认。
+2. 按对应 reference 规范写（addon 现有文件仅作参考）→ 提问关键差异 → 执行 → 请用户确认。
 
 ## Red Flags
 
@@ -56,7 +56,3 @@ description: Use when starting any Counter-Strike 2 map creation task - establis
 | 声音 `.vsndevts` | cs2-sound-creation |
 | 脚本 `cs_script` / `.js` | cs2-script-creation |
 | 技能完整性检查 | scripts/check_skill_integrity.ps1 |
-
-## 任务收尾
-
-中型及以上任务完成前更新 `plan/progress.md`（含 capability-use audit）；缺少记录不得声称完成。

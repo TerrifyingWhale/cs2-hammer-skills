@@ -16,7 +16,7 @@ This is not a prompt pack that only writes a few asset snippets — it is a comp
 - Particles, filters, sounds, scripts: `.vpcf` / `.vpost` / `.vsndevts` / `cs_script`
 - Batch mode: ask common settings once, accept rule files or folder-wide defaults, generate everything in one pass
 - Multi-platform: Claude Code / Cursor / Codex / OpenCode / Gemini CLI
-- Quality gates: skill integrity script + map project planning templates
+- Quality gates: skill integrity script + verify in Hammer before delivery
 
 > ⚠️ **Use with caution**: the programmatic `.vmap` editing features in `cs2-hammer-mapping` (`dmxconvert`, `add_box_brush.py`) are not yet stable. Back up your map files and verify in Hammer before relying on them.
 
@@ -63,8 +63,6 @@ Run the integrity check after modifying skills:
 powershell -ExecutionPolicy Bypass -File scripts/check_skill_integrity.ps1
 ```
 
-For map projects, keep a `plan/` directory: bootstrap it with the plan init script, then work through the stages in `stage-gates.md`.
-
 ## Installation
 
 ### Option 1: Git clone
@@ -96,7 +94,6 @@ cs2-hammer-skills/
 ├── .cursor-plugin/             # Cursor configuration
 ├── hooks/                      # Session-start hooks
 ├── skills/                     # Skill modules (entry + 8 specialized)
-├── plan-template/              # Map project planning templates
 ├── templates/                  # Asset/structure templates
 └── scripts/                    # Tooling scripts
 ```

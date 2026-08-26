@@ -16,7 +16,7 @@
 - 粒子、滤镜、声音、脚本：`.vpcf` / `.vpost` / `.vsndevts` / `cs_script`
 - 批量模式：一次问清公共设置，规则文件/文件夹级默认值批量生成
 - 多平台适配：Claude Code / Cursor / Codex / OpenCode / Gemini CLI
-- 质量门控：技能完整性脚本 + 地图项目计划模板
+- 质量门控：技能完整性脚本 + 交付前在 Hammer 中验证
 
 ## 适用平台
 
@@ -61,8 +61,6 @@
 powershell -ExecutionPolicy Bypass -File scripts/check_skill_integrity.ps1
 ```
 
-地图项目建议使用 `plan/` 记录：先运行计划初始化脚本，再按 `stage-gates.md` 逐阶段推进。
-
 ## 安装
 
 ### 方式一：Git Clone
@@ -94,7 +92,6 @@ cs2-hammer-skills/
 ├── .cursor-plugin/             # Cursor 配置
 ├── hooks/                      # 会话启动脚本
 ├── skills/                     # 技能模块目录（入口 + 8 个专项）
-├── plan-template/              # 地图项目计划模板
 ├── templates/                  # 资产/结构模板
 └── scripts/                    # 工具脚本
 ```

@@ -74,8 +74,6 @@ $requiredFiles = @(
     "hooks/hooks-cursor.json",
     "hooks/run-hook.cmd",
     "hooks/session-start",
-    "scripts/init_plan.ps1",
-    "scripts/init_plan.sh",
     "templates/addon-structure.md",
     "templates/boxes.example.json"
 )
@@ -110,9 +108,7 @@ Assert-Contains "README_EN.md" "1\.0\.3" "English README version current"
 Assert-Contains "hooks/hooks.json" "run-hook\.cmd" "hooks.json wires Windows runner"
 Assert-Contains "hooks/hooks-cursor.json" "session-start" "cursor hooks wire session-start"
 
-# 6. Plan templates contain required sections
-
-# 7. Forbidden legacy project names / removed functionality must not appear in docs
+# 6. Forbidden legacy project names / removed functionality must not appear in docs
 $forbidden = @("ze_obj", "redemption_v2", "resourcecompiler")
 Get-ChildItem -LiteralPath $Root -Recurse -File |
     Where-Object { $_.Extension -in ".md", ".json", ".yaml", ".yml" } |

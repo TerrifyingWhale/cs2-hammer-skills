@@ -6,7 +6,7 @@ allowed-tools: Read Write Edit Bash WebSearch
 
 # CS2 Hammer 地图创作套件 (CS2 Mapping Assistant)
 
-面向 Counter-Strike 2（Source 2 Hammer / CS2 Workshop Tools）地图创作的模块化技能套件：入口路由、专项技能、计划模板与质量门控。
+面向 Counter-Strike 2（Source 2 Hammer / CS2 Workshop Tools）地图创作的模块化技能套件：入口路由、专项技能与质量门控。
 
 ## 原则
 

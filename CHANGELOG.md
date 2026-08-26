@@ -15,6 +15,10 @@
 - 滤镜技能移除批量模式；脚本技能移除复制 point_script.d.ts / tsconfig.json 的说明。
 - 统一各技能格式（先提问、批量模式、参考结构），并去除“同理”等措辞。
 
+### 修复
+
+- 移除计划/plan 功能：删除 `plan-template`、`templates/plan` 与 `init_plan.ps1` / `init_plan.sh`，并同步清理 README/README_EN/CLAUDE 及入口技能中的相关引用。
+
 ## [1.0.0] - 2026-08-25
 
 ### 新增

@@ -20,10 +20,8 @@ The main execution model is:
   - `cs2-material-creation/`, `cs2-texture-creation/`, `cs2-model-creation/`, `cs2-particle-creation/`, `cs2-postprocess-creation/`, `cs2-sound-creation/`, `cs2-script-creation/` handle single asset types.
 - `hooks/` — Session-start injection for platforms (especially Claude/Cursor), including loading entry skill context.
 - `.claude-plugin/plugin.json`, `.cursor-plugin/plugin.json` — Plugin metadata + hook wiring per platform.
-- `plan-template/` — Canonical template files copied into user project `plan/`.
 - `scripts/` — Operational tooling:
   - `check_skill_integrity.ps1`: validates skill structure, frontmatter, cross-references, and version consistency
-  - `init_plan.ps1` / `init_plan.sh`: bootstrap `plan/` from `plan-template/`
 - `templates/` — Asset/structure templates for map projects.
 
 ## Workflow invariants to preserve
@@ -31,7 +29,6 @@ The main execution model is:
 - Do not bypass the entry router for map/asset tasks.
 - Do not fabricate asset formats or entity properties; copy kv3 headers from existing addon files.
 - Do not run manual compilation; Hammer auto-compiles on open/save.
-- Keep `plan/` as persistent project memory (`project-overview.md`, `progress.md`, `notes.md`, `outline.md`, `stage-gates.md`).
 - Ask once for common settings in batch asset tasks.
 - Preserve compatibility across platform entry points (`SKILL.md`, `AGENTS.md`, `GEMINI.md`, plugin manifests, hooks).
 
@@ -43,16 +40,6 @@ The main execution model is:
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File scripts/check_skill_integrity.ps1
-```
-
-### Plan bootstrap
-
-```powershell
-powershell -ExecutionPolicy Bypass -File scripts/init_plan.ps1
-```
-
-```bash
-bash scripts/init_plan.sh
 ```
 
 ## Important references
