@@ -2,7 +2,7 @@
   "name": "cs2-mapping-assistant",
   "displayName": "CS2 Hammer 地图创作套件 (CS2 Mapping Assistant)",
   "description": "面向 Counter-Strike 2 地图创作的技能套件：地图工作流、材质、纹理、模型、粒子、滤镜、声音与脚本",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "author": {
     "name": "TerrifyingWhale"
   },

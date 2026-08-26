@@ -107,11 +107,11 @@ Assert-Contains "README_EN.md" "cs2-hammer-mapping" "English README mentions map
 Assert-Contains "README_EN.md" "check_skill_integrity\.ps1" "English README mentions integrity check"
 
 # 5. Platform and version consistency
-Assert-Contains ".claude-plugin/plugin.json" '"version":\s*"1\.0\.0"' "Claude plugin version matches current skill"
-Assert-Contains ".cursor-plugin/plugin.json" '"version":\s*"1\.0\.0"' "Cursor plugin version matches current skill"
-Assert-Contains "CHANGELOG.md" "\[1\.0\.0\]" "changelog contains current version"
-Assert-Contains "README.md" "1\.0\.0" "README version current"
-Assert-Contains "README_EN.md" "1\.0\.0" "English README version current"
+Assert-Contains ".claude-plugin/plugin.json" '"version":\s*"1\.0\.3"' "Claude plugin version matches current skill"
+Assert-Contains ".cursor-plugin/plugin.json" '"version":\s*"1\.0\.3"' "Cursor plugin version matches current skill"
+Assert-Contains "CHANGELOG.md" "\[1\.0\.3\]" "changelog contains current version"
+Assert-Contains "README.md" "1\.0\.3" "README version current"
+Assert-Contains "README_EN.md" "1\.0\.3" "English README version current"
 Assert-Contains "hooks/hooks.json" "run-hook\.cmd" "hooks.json wires Windows runner"
 Assert-Contains "hooks/hooks-cursor.json" "session-start" "cursor hooks wire session-start"
 

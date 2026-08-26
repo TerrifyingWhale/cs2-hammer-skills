@@ -103,5 +103,5 @@ cs2-hammer-skills/
 
 ## Version
 
-- Version: 1.0.2
+- Version: 1.0.3
 - Last updated: 2026-08-26

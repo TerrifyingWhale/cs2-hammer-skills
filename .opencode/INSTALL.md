@@ -35,7 +35,7 @@ use skill tool to load cs2-mapping/using-cs2-mapping
 
 ```json
 {
-  "plugin": ["cs2-mapping-assistant@git+https://github.com/TerrifyingWhale/cs2-hammer-skills.git#v1.0.0"]
+  "plugin": ["cs2-mapping-assistant@git+https://github.com/TerrifyingWhale/cs2-hammer-skills.git#v1.0.3"]
 }
 ```
 

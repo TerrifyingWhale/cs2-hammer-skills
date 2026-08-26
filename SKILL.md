@@ -63,5 +63,5 @@ allowed-tools: Read Write Edit Bash WebSearch
 
 ## 版本
 
-- 版本：1.0.2
+- 版本：1.0.3
 - 更新日期：2026-08-26
