@@ -8,6 +8,7 @@
 
 ### 变更
 
+- 脚本技能精简为只负责脚本生成：识别本地 point_script.d.ts 后生成，移除地图挂载与放置说明。
 - 所有资产生成统一为先按 reference 规范写，addon 现有文件仅作参考。
 - 粒子、滤镜技能改为按用户需求自己写，现有文件仅作参考；纹理（.vtex）直接按 reference 模板生成。
 - `<name>` 占位符统一改为 `<文件名>`；脚本引用后缀统一为 `.js`。
@@ -40,3 +41,4 @@
 - 添加 `scripts/init_plan.ps1` / `scripts/init_plan.sh`，用于从 `plan-template/` 初始化地图项目计划。
 - 添加 `plan-template/`：项目概览、进度追踪、阶段门禁、笔记、地图大纲。
 - 添加 `templates/`：addon 目录结构模板与刷子盒子示例。
+
