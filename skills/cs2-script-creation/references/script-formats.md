@@ -9,8 +9,8 @@
 ## 文件位置
 
 - 脚本 `.js` → `scripts/`。
-- 自定义 HUD 布局 XML → `panorama/layout/custom_game/`。
-- 自定义 HUD 样式 CSS → `panorama/styles/custom_game/`。
+- 自定义 HUD 布局 `.xml` → `panorama/layout/custom_game/`。
+- 自定义 HUD 样式 `.css` → `panorama/styles/custom_game/`。
 
 ## 本地 API 参考（编写时以它为准）
 
@@ -21,4 +21,5 @@
 ## 官方文档
 
 - [Scripting API](https://developer.valvesoftware.com/wiki/Counter-Strike_2_Workshop_Tools/Scripting/API)
+
 
